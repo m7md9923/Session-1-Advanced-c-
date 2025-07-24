@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Demo.Ex2;
 
 namespace Demo;
 using Demo.Ex1;
@@ -140,6 +141,23 @@ class Program
         // Console.WriteLine(num);
         
 
+        #endregion
+
+        #region IEquatable Interface - IEqualityComparer Interface
+        
+        // Employee[] emps =
+        // {
+        //     new Employee(15, 1000, "mohamed"),
+        //     new Employee(2, 8000, "ahmed"),
+        //     new Employee(1000, 3000, "ali"),
+        //     new Employee(30, 4000, "hamada"),
+        // };
+        // // int res = Helper<Employee>.LinearSearch<Employee>(emps , new Employee(10, 3000, "ali") , new EmployeeNameEqualityComparer());
+        // // Console.WriteLine($"index of target : {res}");
+        //
+        // int ans = Helper<Employee>.LinearSearch<Employee>(emps , new Employee(10, 3000, "ali") , new EmployeeSalaryEqualityComparer());
+        // Console.WriteLine($"index of target : {ans}");
+        
         #endregion
         
         #endregion

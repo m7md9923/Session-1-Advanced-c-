@@ -1,6 +1,8 @@
-﻿namespace Demo.Ex1;
+﻿using Demo.Ex2;
 
-internal class Helper
+namespace Demo.Ex1;
+
+internal class Helper<T> where T : IEquatable<T>
 {
     #region Swap [Non Generic]
     
@@ -88,7 +90,7 @@ internal class Helper
     
     #region Linear Search [Generic]
     
-    public static int LinearSearch<T>(T[] arr, T target)
+    public static int LinearSearch<T>(T[] arr, T target , IEqualityComparer<T> comparer) where T : IEquatable<T>
     {
         if (arr is not null && arr.Length > 0 && target is not null)
         {
@@ -100,7 +102,10 @@ internal class Helper
                 //     // Class --> == , Equals 
                 //     return i;
                 // }
-                if (target.Equals(arr[i]))
+                // if (target.Equals(arr[i]))
+                //     return i;
+
+                if (comparer.Equals(target, arr[i]))
                     return i;
             }
         }

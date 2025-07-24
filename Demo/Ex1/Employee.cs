@@ -1,6 +1,6 @@
 ﻿namespace Demo.Ex1;
 
-internal class Employee
+internal class Employee : IEquatable<Employee>
 {
     #region Properties
 
@@ -30,16 +30,16 @@ internal class Employee
     #region OP overloading 
     // == , != 
 
-    // public static bool operator ==(Employee emp1, Employee emp2)
-    // {
-    //     // obj state 
-    //     //return emp1.Id == emp2.Id && emp1.Name == emp2.Name && emp1.Salary == emp2.Salary;
-    //     return emp1.Equals(emp2);
-    // }
-    // public static bool operator != (Employee emp1, Employee emp2)
-    // {
-    //     return !(emp1 == emp2);
-    // }
+    public static bool operator ==(Employee emp1, Employee emp2)
+    {
+        // obj state 
+        //return emp1.Id == emp2.Id && emp1.Name == emp2.Name && emp1.Salary == emp2.Salary;
+        return emp1.Equals(emp2);
+    }
+    public static bool operator != (Employee emp1, Employee emp2)
+    {
+        return !(emp1 == emp2);
+    }
 
     public override bool Equals(object? obj)
     {
@@ -96,6 +96,11 @@ internal class Employee
         
         // correct
         return HashCode.Combine(this.Id, this.Name, this.Salary);
+    }
+
+    public bool Equals(Employee? other)
+    {
+        return other is not null && this.Id == other.Id && this.Name == other.Name && this.Salary == other.Salary;
     }
     
     #endregion
