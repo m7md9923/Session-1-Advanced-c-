@@ -2,7 +2,17 @@
 
 namespace Demo.Ex1;
 
-internal class Helper<T> where T : IEquatable<T> , IComparable<T>
+// Constraints has 2 Levels :
+// 1] Generic Constaint on class level 
+// 2] Generic Constaint on method level
+// 1. Primary Constraint
+// 2. Secondary Constraint
+// 3. Ctor Constraint
+
+
+internal class Helper<T> where T: IEquatable<T>, IComparable<T>
+// internal class Helper<T> where T: struct
+    // Primary Constraint ==> General, Special Primary Constaint [0 : 1]
 {
     #region Swap [Non Generic]
     
