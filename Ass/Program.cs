@@ -1,5 +1,7 @@
-﻿using Ass.Q1;
+﻿using System.Collections;
+using Ass.Q1;
 using Ass.Q2;
+using Ass.Q3;
 
 namespace Ass;
 
@@ -23,27 +25,42 @@ class Program
         
         #region Question 2
         
+        ArrayList nums = new ArrayList(){1, 2, 3, 4, 5 };
+        Console.WriteLine($"Before:");
+        foreach (var item in nums)
+            Console.Write($"{item}, ");
+        Console.WriteLine();
+        
+        ArrayListReverse.reverse(nums);
+        Console.WriteLine($"After:");
+        foreach (var item in nums)
+            Console.Write($"{item}, ");
+        Console.WriteLine();
+        
+        ArrayList names = new ArrayList() { "hello", "world", "foo", "bar" };
+        Console.WriteLine($"Before: ");
+        foreach (var item in names)
+            Console.Write($"{item}, ");
+        Console.WriteLine();
+        
+        ArrayListReverse.reverse(names);
+        Console.WriteLine($"After: ");
+        foreach (var item in names)
+            Console.Write($"{item}, ");
+        Console.WriteLine();
+        
+        #endregion
+        
+        #region Question 3
+        
         // List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
         // Console.WriteLine($"Before:");
         // foreach (var item in nums)
         //     Console.Write($"{item}, ");
         // Console.WriteLine();
-        //
-        // ArrayListReverse.reverse<int>(nums);
+        // List<int> even =  ArrayListEvenNumbers.PrintEvenNumbers(nums);
         // Console.WriteLine($"After:");
-        // foreach (var item in nums)
-        //     Console.Write($"{item}, ");
-        // Console.WriteLine();
-        //
-        // List<string> names = new List<string> { "hello", "world", "foo", "bar" };
-        // Console.WriteLine($"Before: ");
-        // foreach (var item in names)
-        //     Console.Write($"{item}, ");
-        // Console.WriteLine();
-        //
-        // ArrayListReverse.reverse<string>(names);
-        // Console.WriteLine($"After: ");
-        // foreach (var item in names)
+        // foreach (var item in even)
         //     Console.Write($"{item}, ");
         // Console.WriteLine();
         

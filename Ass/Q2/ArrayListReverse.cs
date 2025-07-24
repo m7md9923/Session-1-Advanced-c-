@@ -4,7 +4,7 @@ namespace Ass.Q2;
 
 public static class ArrayListReverse
 {
-    public static void reverse<T>(this IList list)
+    public static void reverse(this ArrayList list)
     {
         if (list is not null &&  list.Count > 0)
         {
