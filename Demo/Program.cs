@@ -119,7 +119,29 @@ class Program
         
 
         #endregion
+        
+        #region Is Operator
+        
+        // Employee emp1 = new Employee(1, 1000, "mohamed");
+        // Employee emp2 = new Employee(1, 1000, "mohamed");
+        // Console.WriteLine(emp1.Equals(emp2));
+        
+        #endregion
 
+        #region As Operator
+
+        // Employee emp3 = new Employee(1, 1000, "mohamed");
+        // Employee emp4 = new Employee(1, 1000, "mohamed");
+        // Console.WriteLine(emp3?.Equals(emp4));
+        //
+        // object obj = 10;
+        // int? num = obj as int?;
+        // num = obj is int  i ? i : 0;
+        // Console.WriteLine(num);
+        
+
+        #endregion
+        
         #endregion
     }
     

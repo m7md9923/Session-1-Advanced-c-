@@ -43,10 +43,49 @@ internal class Employee
 
     public override bool Equals(object? obj)
     {
-        Employee? emp = (Employee?)obj;
-        if (emp is null) return false;
+        #region Explicit Casting 
+
+        // Employee? emp = (Employee?)obj;
+        // if (emp is null) return false;
+        //
+        // return this.Id == emp.Id && this.Name == emp.Name && this.Salary == emp.Salary;
         
-        return this.Id == emp.Id && this.Name == emp.Name && this.Salary == emp.Salary;
+        #endregion
+        
+        #region Implicit Casting [Is operator]
+        
+        // to check the val is from the specified type ot not 
+        // cast to the specified type
+        
+        // if(obj is null)   // check
+        //     return false;
+        // if(obj is Employee emp) // check & cast
+        //     // obj must be employee or any type that inherit from employee
+        //     return this.Id == emp.Id && this.Name == emp.Name && this.Salary == emp.Salary;
+        // else 
+        //     return false;
+        //
+        #endregion
+        
+        #region As Operator
+        
+        // Employee? emp = obj as Employee; // as retrun instance , fail --> null
+        // if(emp is null) 
+        //     return false;
+        // else 
+        //     return this.Id == emp.Id && this.Name == emp.Name && this.Salary == emp.Salary;
+        //
+        #endregion
+        
+        #region Property Pattern Matching 
+        
+        if(obj is Employee {Id : int id , Name : string name  , Salary : decimal salary})
+            return this.Id == id && this.Name == name && this.Salary == salary;
+        else 
+            return false;
+        
+        #endregion
+        
     }
 
     public override int GetHashCode()
