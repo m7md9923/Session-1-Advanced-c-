@@ -65,7 +65,16 @@ class Program
         // Console.WriteLine();
         
         #endregion
-        
+
+        #region Question 5
+
+        // string s;
+        // Console.WriteLine("Enter a string: ");
+        // s = Console.ReadLine();
+        // Console.WriteLine($"the first non repeated char is :{StringFirstNonRepeatedChar.FirstNonRepeatedChar(s)}");
+
+        #endregion
+
         #endregion
     }
 }
