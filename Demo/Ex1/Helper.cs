@@ -67,4 +67,44 @@ internal class Helper
         Console.WriteLine($"a : {a}");
     }
     #endregion
+    
+    #region Linear Search [Non Generic]
+
+    // public static int LinearSearch(int[] arr, int target)
+    // {
+    //     if (arr is not null && arr.Length > 0)
+    //     {
+    //         for (int i = 0; i < arr.Length; i++)
+    //         {
+    //             if (arr[i] == target)
+    //             {
+    //                 return i;
+    //             }
+    //         }
+    //     }
+    //     return -1;
+    // }
+    #endregion
+    
+    #region Linear Search [Generic]
+    
+    public static int LinearSearch<T>(T[] arr, T target)
+    {
+        if (arr is not null && arr.Length > 0 && target is not null)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                // if (arr[i]?.Equals(target) ?? false) // user defined struct --> not exist  
+                // {
+                //     // struct --> Equals 
+                //     // Class --> == , Equals 
+                //     return i;
+                // }
+                if (target.Equals(arr[i]))
+                    return i;
+            }
+        }
+        return -1;
+    }
+    #endregion
 }

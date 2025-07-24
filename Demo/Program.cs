@@ -49,6 +49,49 @@ class Program
         
         #endregion
         
+        #region Ex2 [Linear Search]
+
+        // int[] arr = { 1, 2, 3, 4 ,5};
+        // //int target = Helper.LinearSearch(arr, 3);
+        // //Console.WriteLine($"Index of target value : {target}");
+        //
+        // // Point[] points =
+        // // {
+        // //     new Point(10, 20),
+        // //     new Point(30, 40),
+        // //     new Point(50, 60),
+        // //     new Point(70, 80),
+        // //     new Point(90, 100)
+        // // };
+        //
+        // Employee emp1 = new Employee(1, 1000, "mohamed");
+        // Employee emp2 = new Employee(1, 2000, "mohamed");
+        // Console.WriteLine(emp1.GetHashCode());
+        // Console.WriteLine(emp2.GetHashCode());
+        // // op overloading --> == , != 
+        // if (emp1 == emp2) Console.WriteLine("equal"); // == not defined in uder defined struct 
+        // else Console.WriteLine("not equal");
+        //
+        // // user defined struct -->  Equals
+        // // Equals --> value type : compare obj states [compare field by field]
+        // // ==> op overloading 
+        //
+        // // user defined struct -->  Equals
+        // // Equals --> obj -->  compare ref
+        // // ==> compare ref
+        //
+        // Employee[] emps =
+        // {
+        //     new Employee(15, 1000, "mohamed"),
+        //     new Employee(2, 8000, "ahmed"),
+        //     new Employee(10, 3000, "ali"),
+        //     new Employee(30, 4000, "hamada"),
+        // };
+        // int res = Helper.LinearSearch(emps , new Employee(10, 3000, "ali"));
+        // Console.WriteLine($"index of target : {res}");
+        
+        #endregion
+
         #endregion
     }
     
