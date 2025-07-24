@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Demo.Ex2;
+using Demo.Ex3;
 
 namespace Demo;
 using Demo.Ex1;
@@ -160,6 +161,41 @@ class Program
         
         #endregion
         
+        #region Bubble Sort [int - employee(Icomparable) - IComparer Interface] 
+        
+        // int[] arr = { 10, 20, 3, 4 ,5};
+        // Helper<int>.BubbleSort(arr);
+        // foreach (var item in arr)
+        //     Console.Write($"{item} ");
+        // Console.WriteLine();
+
+        // Employee[] emps =
+        // {
+        //     new Employee(15, 1000, "mohamed" , 20),
+        //     new Employee(2, 8000, "ahmed" , 18),
+        //     new Employee(10, 3000, "ali" , 10),
+        //     new Employee(30, 4000, "hamada" , 35)
+        // };
+        // Helper<Employee>.BubbleSort(emps , new EmployeeNameComparer());
+        // foreach (var item in emps)
+        //     Console.WriteLine($"{item} ");
+        // Console.WriteLine();
+        // Helper<Employee>.BubbleSort(emps , new EmployeeAgeComparer());
+        // foreach (var item in emps)
+        //     Console.WriteLine($"{item} ");
+        // Console.WriteLine();
+        
+        // Employee emp1 = new Employee(15, 1000, "mohamed");
+        // Employee emp2 = new Employee(2, 8000, "ahmed");
+        // if(emp1 > emp2) 
+        //     Console.WriteLine("true");
+        // else 
+        //     Console.WriteLine("false");
+
+        
+        
+        #endregion
+
         #endregion
     }
     

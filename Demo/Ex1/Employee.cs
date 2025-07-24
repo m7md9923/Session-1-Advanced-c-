@@ -1,21 +1,23 @@
 ﻿namespace Demo.Ex1;
 
-internal class Employee : IEquatable<Employee>
+internal class Employee : IEquatable<Employee> , IComparable<Employee>
 {
     #region Properties
 
     public int Id { get; set; }
     public decimal Salary { get; set; }
     public string? Name { get; set; }
+    public int Age { get; set; }
     #endregion
 
     #region Ctor
 
-    public Employee(int id, decimal salary, string name)
+    public Employee(int id, decimal salary, string name , int age)
     {
         Id = id;
         Salary = salary;
         Name = name;
+        Age = age;
     }
     #endregion
 
@@ -23,7 +25,7 @@ internal class Employee : IEquatable<Employee>
 
     public override string ToString()
     {
-        return $"Id : {Id} , Name : {Name} , Salary : {Salary}";
+        return $"Id : {Id} , Name : {Name} , Salary : {Salary} , Age : {Age}";
     }
     #endregion
 
@@ -104,5 +106,11 @@ internal class Employee : IEquatable<Employee>
     }
     
     #endregion
-    
+
+    public int CompareTo(Employee? other)
+    {
+        if(other is null) 
+            return 1;
+        return this.Salary.CompareTo(other.Salary); // compare to inside int 
+    }
 }

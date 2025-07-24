@@ -2,7 +2,7 @@
 
 namespace Demo.Ex1;
 
-internal class Helper<T> where T : IEquatable<T>
+internal class Helper<T> where T : IEquatable<T> , IComparable<T>
 {
     #region Swap [Non Generic]
     
@@ -111,5 +111,50 @@ internal class Helper<T> where T : IEquatable<T>
         }
         return -1;
     }
+    #endregion
+    
+    #region Bubble Sort [Non Generic]
+
+    // public static void BubbleSort(int[] arr)
+    // {
+    //     if (arr is not null && arr.Length > 0)
+    //     {
+    //         for (int i = 0; i < arr.Length; i++)
+    //         {
+    //             for (int j = 0; j < arr.Length - i - 1; j++)
+    //             {
+    //                 if (arr[j] > arr[j + 1])
+    //                 {
+    //                     Helper<int>.Swap(ref arr[j], ref arr[j + 1]);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    
+    #endregion
+    
+    #region Bubble Sort [Generic]
+    
+    public static void BubbleSort(T[] arr , IComparer<T> comparer)
+    {
+        if (arr is not null && arr.Length > 0)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = 0; j < arr.Length - i - 1; j++)
+                {
+                    // Caller > Parameter ==> +Ve
+                    // Caller < Param ==> -Ve
+                    // Caller == Param ==> 0
+                    if (comparer.Compare(arr[j] , arr[j+1]) > 0) // >, < not exist in all datatypes
+                    {
+                        Helper<T>.Swap(ref arr[j], ref arr[j + 1]);
+                    }
+                }
+            }
+        }
+    }
+    
     #endregion
 }
