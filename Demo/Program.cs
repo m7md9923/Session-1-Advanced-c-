@@ -1,4 +1,6 @@
-﻿namespace Demo;
+﻿using System.Collections;
+
+namespace Demo;
 using Demo.Ex1;
 
 class Program
@@ -90,6 +92,32 @@ class Program
         // int res = Helper.LinearSearch(emps , new Employee(10, 3000, "ali"));
         // Console.WriteLine($"index of target : {res}");
         
+        #endregion
+        
+        #region Equality - Get HashCode
+        
+        // Employee emp1 = new Employee(1, 1000, "mohamed");
+        // Employee emp2 = new Employee(1, 1000, "mohamed");
+        // Console.WriteLine(emp1.Equals(emp2));
+        // Console.WriteLine(emp1.GetHashCode());
+        // Console.WriteLine(emp2.GetHashCode());
+        
+        
+        
+        // var table = new Hashtable();
+        //
+        // table[emp1] = "dev";
+        // Console.WriteLine(table[emp2]);
+        
+        // 2 equal --> hashcode the same 
+        // string s = "mohamed";
+        // string t = "mohamed";
+        // Console.WriteLine(s.Equals(t));
+        // Console.WriteLine(s.GetHashCode());
+        // Console.WriteLine(t.GetHashCode());
+        
+        
+
         #endregion
 
         #endregion
