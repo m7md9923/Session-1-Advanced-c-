@@ -1,0 +1,201 @@
+﻿using System.Collections;
+using Demo.Ex2;
+using Demo.Ex3;
+
+namespace Demo;
+using Demo.Ex1;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        #region Demo
+
+        #region Ex1 [Swap] [int - decimal - point] 
+        
+        // object a = 10 , b = 20;
+        // Console.WriteLine($"a : {a}");
+        // Console.WriteLine($"b : {b}");
+        // Helper.Swap(ref a, ref b);
+        // Console.WriteLine($"After Swap : ");
+        // Console.WriteLine($"a : {a}");
+        // Console.WriteLine($"b : {b}");
+        //
+        // decimal x = 10 , y = 20;
+        // Console.WriteLine($"a : {x}");
+        // Console.WriteLine($"b : {y}");
+        // Helper.Swap(ref x, ref y);
+        // Console.WriteLine($"After Swap : ");
+        // Console.WriteLine($"a : {x}");
+        // Console.WriteLine($"b : {y}");
+        //
+        // // struct if u create ctor ,he does not remove parameterless ctor
+        //
+        // Point p1 = new Point(10, 20);
+        // Point p2 = new Point(30, 40);
+        // Console.WriteLine($"p1 : {p1}");
+        // Console.WriteLine($"p2 : {p2}");
+        // Console.WriteLine($"After Swap : ");
+        // Helper.Swap(ref p1, ref p2);
+        // Console.WriteLine($"p1 : {p1}");
+        // Console.WriteLine($"p2 : {p2}");
+        //
+        // int aa = 10 , bb = 20;
+        // Console.WriteLine($"a : {aa}");
+        // Console.WriteLine($"b : {bb}");
+        // Helper.Swap<int>(ref aa, ref bb);
+        // Console.WriteLine($"After Swap : ");
+        // Console.WriteLine($"a : {aa}");
+        // Console.WriteLine($"b : {bb}");
+        //
+        // Point pp1 = new Point(10, 20);
+        // Helper.Print(pp1);
+        
+        #endregion
+        
+        #region Ex2 [Linear Search]
+
+        // int[] arr = { 1, 2, 3, 4 ,5};
+        // //int target = Helper.LinearSearch(arr, 3);
+        // //Console.WriteLine($"Index of target value : {target}");
+        //
+        // // Point[] points =
+        // // {
+        // //     new Point(10, 20),
+        // //     new Point(30, 40),
+        // //     new Point(50, 60),
+        // //     new Point(70, 80),
+        // //     new Point(90, 100)
+        // // };
+        //
+        // Employee emp1 = new Employee(1, 1000, "mohamed");
+        // Employee emp2 = new Employee(1, 2000, "mohamed");
+        // Console.WriteLine(emp1.GetHashCode());
+        // Console.WriteLine(emp2.GetHashCode());
+        // // op overloading --> == , != 
+        // if (emp1 == emp2) Console.WriteLine("equal"); // == not defined in uder defined struct 
+        // else Console.WriteLine("not equal");
+        //
+        // // user defined struct -->  Equals
+        // // Equals --> value type : compare obj states [compare field by field]
+        // // ==> op overloading 
+        //
+        // // user defined struct -->  Equals
+        // // Equals --> obj -->  compare ref
+        // // ==> compare ref
+        //
+        // Employee[] emps =
+        // {
+        //     new Employee(15, 1000, "mohamed"),
+        //     new Employee(2, 8000, "ahmed"),
+        //     new Employee(10, 3000, "ali"),
+        //     new Employee(30, 4000, "hamada"),
+        // };
+        // int res = Helper.LinearSearch(emps , new Employee(10, 3000, "ali"));
+        // Console.WriteLine($"index of target : {res}");
+        
+        #endregion
+        
+        #region Equality - Get HashCode
+        
+        // Employee emp1 = new Employee(1, 1000, "mohamed");
+        // Employee emp2 = new Employee(1, 1000, "mohamed");
+        // Console.WriteLine(emp1.Equals(emp2));
+        // Console.WriteLine(emp1.GetHashCode());
+        // Console.WriteLine(emp2.GetHashCode());
+        
+        
+        
+        // var table = new Hashtable();
+        //
+        // table[emp1] = "dev";
+        // Console.WriteLine(table[emp2]);
+        
+        // 2 equal --> hashcode the same 
+        // string s = "mohamed";
+        // string t = "mohamed";
+        // Console.WriteLine(s.Equals(t));
+        // Console.WriteLine(s.GetHashCode());
+        // Console.WriteLine(t.GetHashCode());
+        
+        
+
+        #endregion
+        
+        #region Is Operator
+        
+        // Employee emp1 = new Employee(1, 1000, "mohamed");
+        // Employee emp2 = new Employee(1, 1000, "mohamed");
+        // Console.WriteLine(emp1.Equals(emp2));
+        
+        #endregion
+
+        #region As Operator
+
+        // Employee emp3 = new Employee(1, 1000, "mohamed");
+        // Employee emp4 = new Employee(1, 1000, "mohamed");
+        // Console.WriteLine(emp3?.Equals(emp4));
+        //
+        // object obj = 10;
+        // int? num = obj as int?;
+        // num = obj is int  i ? i : 0;
+        // Console.WriteLine(num);
+        
+
+        #endregion
+
+        #region IEquatable Interface - IEqualityComparer Interface
+        
+        // Employee[] emps =
+        // {
+        //     new Employee(15, 1000, "mohamed"),
+        //     new Employee(2, 8000, "ahmed"),
+        //     new Employee(1000, 3000, "ali"),
+        //     new Employee(30, 4000, "hamada"),
+        // };
+        // // int res = Helper<Employee>.LinearSearch<Employee>(emps , new Employee(10, 3000, "ali") , new EmployeeNameEqualityComparer());
+        // // Console.WriteLine($"index of target : {res}");
+        //
+        // int ans = Helper<Employee>.LinearSearch<Employee>(emps , new Employee(10, 3000, "ali") , new EmployeeSalaryEqualityComparer());
+        // Console.WriteLine($"index of target : {ans}");
+        
+        #endregion
+        
+        #region Bubble Sort [int - employee(Icomparable) - IComparer Interface] 
+        
+        // int[] arr = { 10, 20, 3, 4 ,5};
+        // Helper<int>.BubbleSort(arr);
+        // foreach (var item in arr)
+        //     Console.Write($"{item} ");
+        // Console.WriteLine();
+
+        // Employee[] emps =
+        // {
+        //     new Employee(15, 1000, "mohamed" , 20),
+        //     new Employee(2, 8000, "ahmed" , 18),
+        //     new Employee(10, 3000, "ali" , 10),
+        //     new Employee(30, 4000, "hamada" , 35)
+        // };
+        // Helper<Employee>.BubbleSort(emps , new EmployeeNameComparer());
+        // foreach (var item in emps)
+        //     Console.WriteLine($"{item} ");
+        // Console.WriteLine();
+        // Helper<Employee>.BubbleSort(emps , new EmployeeAgeComparer());
+        // foreach (var item in emps)
+        //     Console.WriteLine($"{item} ");
+        // Console.WriteLine();
+        
+        // Employee emp1 = new Employee(15, 1000, "mohamed");
+        // Employee emp2 = new Employee(2, 8000, "ahmed");
+        // if(emp1 > emp2) 
+        //     Console.WriteLine("true");
+        // else 
+        //     Console.WriteLine("false");
+
+        
+        
+        #endregion
+        #endregion
+    }
+    
+}
